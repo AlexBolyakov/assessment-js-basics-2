@@ -131,8 +131,8 @@ const deals = [
 
 //CODE HERE
 
-title.deals = deals[0].title + deals[0].replace('15', '10');
-console.log(newDeals);
+deals[0].title = deals[0].title.replace(15, 10);
+console.log(deals);
 
 
 /*
@@ -150,5 +150,5 @@ console.log(newDeals);
 
 //CODE HERE
 
-deals[1].desc = '  This deal lasts until the end of March! ';
+deals[1].desc = deals[1].desc.replace('March', 'April');
 console.log(deals)

@@ -24,11 +24,12 @@ class Employee {
     constructor(name, shifts) {
         this.name = name;
         this.shifts = shifts;
-    }
-    getSchedule() {
-        console.log(this.name, 'works on', this.shifts);
+        this.getSchedule = function () {
+            console.log(this.name, 'works on', this.shifts)
+        }
     }
 }
+    
 
 
 /*
@@ -107,9 +108,7 @@ class Manager extends Employee {
         console.log(this.name, 'manages', this.employees)
     } 
     addEmployee(emp) { 
-        this.employees = []
         this.employees.push(emp)
-    
     }    
 }
 
@@ -126,7 +125,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-let manager = new Manager('Winston', 'weekday mornings', 'Alex, Anthony');
+let manager = new Manager('Winston', 'weekday mornings', ['Alex', 'Anthony']);
 
 /*
     Call the `getEmployees` method on the
